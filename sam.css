@@ -1,0 +1,25 @@
+.all{
+  height: 300px;
+  width: 400px;
+  border: solid 1px black;
+  background-color: gray;
+  display:inline-flex;
+  }
+.items{
+  height: 100%;
+  display:inline-flex;
+  background-color: green;
+}
+.empty{
+  height: 100%;
+  width: 100%;
+  border:solid 1px blue;
+  display: inline-block;
+  float:left;
+}
+.item{
+  height: 100%;
+  width:100px;
+  display: inline-block;
+  float:left;
+}
