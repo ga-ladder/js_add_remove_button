@@ -3,17 +3,24 @@
 <link rel="stylesheet" type="text/css" href="sam.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="sam.js"></script>
+<script type="text/javascript" src="drag.js"></script>
 <body>
 
 
+<input type="file" id="multiImage" name="image_file[]" accept="image/*">
 <button id="append">add</button>
-
+<br/>
 <div class="all">
   <div class="items" id="itemlocation">
   </div>
   <div class="empty"></div>
 </div>
 
+<input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+<a href="#" id="fileSelect">ファイルを選択</a>
 
+<div style="height:300px; width:300px; background-color:green;"id="dropbox"></div>
+
+<div id="imgField"></div>
 </body>
 </html>

@@ -10,4 +10,37 @@ $(function(){
 
     $(this).parent().remove();
   })
+
+  // file-selectボタンを変更する
+  var fileSelect = document.getElementById("fileSelect"),
+      fileElem   = document.getElementById("fileElem");
+
+  fileSelect.addEventListener("click", function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // "#" に移動するのを防ぐ
+  }, false);
+
+  // fileElem <- input tag が変更されたら files が表示されるようにする
+  var inputElement = document.getElementById("fileElem");
+  inputElement.addEventListener("change", handleFiles, false);
+
+  var fileList = this.files;
+  
+
+  /* 複数のファイルオブジェクトをもらって画像を表示させる */
+  function handleFiles() {
+  var fileList = this.files;
+    console.log(fileList);
+
+    /* ファイルリストを処理するコードがここに入る */
+    var objectURL = window.URL.createObjectURL(fileList[0]);
+    console.log(objectURL);
+    var imgFile = document.createElement('img');
+    imgFile.src = objectURL;
+
+    var imgField = document.getElementById("imgField");
+    imgField.appendChild(imgFile);
+  }
 })
